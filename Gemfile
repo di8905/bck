@@ -1,3 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'rspec'
+gem 'sinatra'
+gem 'puma'
+
+group :test do
+  gem 'rspec'
+end
+
