@@ -7,7 +7,13 @@ $(document).ready(function(){
     });
   });
   $("#number_input").on("change paste keyup", function () {
-    console.log($(this).val());
+    $.ajax({
+      url: "/find",
+      type: "get",
+      data: {number: $(this).val()},
+      success: function (response) { $('#result').text(response) },
+      erros: function (xhr) {}
+    });
   });
 });
 

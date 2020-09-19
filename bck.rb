@@ -12,3 +12,11 @@ get '/' do
   erb :app
 end
 
+get '/find' do
+  if request.xhr?
+    finder.call(request.params['number']).to_s
+  else
+    'false'
+  end
+end
+
