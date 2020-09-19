@@ -1,5 +1,5 @@
-require_relative 'build_regexp'
-require_relative 'app'
+require_relative 'lib/build_regexp'
+require_relative 'lib/finder'
 
 RSpec.describe BuildRegexp do
   it 'creates regexp' do

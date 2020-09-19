@@ -1,8 +1,10 @@
 require 'sinatra'
-require_relative 'app'
+require_relative 'lib/finder'
+
+finder = Finder.new
 
 get '/' do
-  result = App.new.call(request['number'])
+  result = finder.call(request['number'])
   "Result for number #{request['number']} is #{result}"
 end
 
