@@ -6,5 +6,8 @@ $(document).ready(function(){
         alert("Error: "+xhr.status+": "+xhr.statusText);
     });
   });
+  $("#number_input").on("change paste keyup", function () {
+    console.log($(this).val());
+  });
 });
 

@@ -4,7 +4,7 @@ class Finder
   def call(number)
     res = nil
     reg = BuildRegexp.new.call(number.to_s)
-    File.open('singular_and_plural.txt', 'r') do |file|
+    File.open('lib/singular_and_plural.txt', 'r') do |file|
       res = file.find_all do |line|
         line.chomp =~ reg
       end
