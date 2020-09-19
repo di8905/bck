@@ -2,6 +2,8 @@ require 'sinatra'
 require 'sinatra/reloader' if development?
 require_relative 'lib/finder'
 
+set :bind, '0.0.0.0'
+
 finder = Finder.new
 
 get '/' do
