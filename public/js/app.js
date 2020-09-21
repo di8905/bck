@@ -30,5 +30,5 @@ $(document).ready(function(){
     });
   };
   $("#number_input").inputFilter(function(value) { return /^-?\d*$/.test(value); });
-
+  $("#number_input").focus();
 });
