@@ -3,6 +3,7 @@ require_relative 'build_regexp'
 class Finder
   def call(number)
     res = nil
+    return [] if number.to_s.empty? || number.to_i.zero?
     reg = BuildRegexp.new.call(number.to_s)
     File.open('lib/singular_and_plural.txt', 'r') do |file|
       res = file.find_all do |line|
