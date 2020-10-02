@@ -32,4 +32,10 @@ RSpec.describe Finder do
 
     expect(Finder.new.call(number)).to include('луна')
   end
+
+  it 'handles empty' do
+    number = ''
+
+    expect(Finder.new.call(number)).to eq([])
+  end
 end
