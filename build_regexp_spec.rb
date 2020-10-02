@@ -20,10 +20,16 @@ RSpec.describe BuildRegexp do
 
 end
 
-RSpec.describe App do
-  it 'finds word' do
+RSpec.describe Finder do
+  it 'finds word by number' do
     number = '107'
 
-    expect(App.new.call(number)).to include('колесо')
+    expect(Finder.new.call(number)).to include('колесо')
+  end
+
+  it 'handles zeroes' do
+    number = '00'
+
+    expect(Finder.new.call(number)).to include('луна')
   end
 end
