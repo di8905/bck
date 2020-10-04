@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'newrelic_rpm'
 require 'sinatra/reloader' if development?
 require_relative 'lib/finder'
 
